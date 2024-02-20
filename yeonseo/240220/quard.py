@@ -1,3 +1,9 @@
+####################################################################################
+#
+#  https://school.programmers.co.kr/learn/courses/30/lessons/68936?language=python3
+#
+####################################################################################
+
 def solution(arr):
     global count
     press(0,0, int(len(arr[0])), arr)
