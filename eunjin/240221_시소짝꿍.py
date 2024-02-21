@@ -1,4 +1,6 @@
 '''
+https://school.programmers.co.kr/learn/courses/30/lessons/152996?language=python3
+
 1. 정렬
 2. 중복의 개수를 구하기. 중복이 x개일 경우
 -> res += x * x-1 / 2 연산하기 (중복인 수끼리 쌍)
