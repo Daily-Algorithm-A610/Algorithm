@@ -27,7 +27,7 @@ def solution(board):
 
     q = deque([])
     q.append(startpoint)
-    visited = [[99999999 for i in range(M)] for j in range(N)]
+    visited = [[False for i in range(M)] for j in range(N)]
     flag = False
 
     while q:
@@ -48,8 +48,8 @@ def solution(board):
                 while 0 <= nx + dx[i] < M and 0 <= ny + dy[i] < N and board[ny + dy[i]][nx + dx[i]] != 'D':
                     nx += dx[i]
                     ny += dy[i]
-                if visited[ny][nx] > answer:
-                    visited[ny][nx] = answer
+                if visited[ny][nx] is False:
+                    visited[ny][nx] = True
                     q.append([ny,nx])
 
     if flag:
