@@ -2,6 +2,7 @@
  * https://school.programmers.co.kr/learn/courses/30/lessons/172927
  * 완탐으로 풀었는데 왜 실패함?
  * 진짜 모름
+ * minerals가 고작 50개 이하로 나약하길래 완탐 했습니다.
  */
 function solution(picks, minerals) {
   var answer = -1;
@@ -10,8 +11,9 @@ function solution(picks, minerals) {
 
   return answer;
 
-  function mine(picks, minerals, mIndex, count) {
+  function mine(picks, minerals, mIndex, _count) {
     for (let pick = 0; pick < picks.length; pick++) {
+      let count = _count; // 이거 그냥 count를 써버렸더니 초기화가 안되는 거였음 ㅎㅎ;
       if (picks[pick] == 0) {
         continue;
       } else {
@@ -21,6 +23,7 @@ function solution(picks, minerals) {
           }
         }
         picks[pick]--;
+
         if (
           mIndex + 5 < minerals.length &&
           picks[0] + picks[1] + picks[2] != 0
